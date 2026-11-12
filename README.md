@@ -18,12 +18,14 @@
 
 ## Results
 
-Not yet produced. The notebook needs the Kaggle dataset, which is not downloaded to this workstation. After running the notebook on Kaggle, fill in this table:
+Real data, full dataset (284,807 rows, 492 frauds). Splits: train 199,368 rows (384 frauds), validation 42,718 (56), test 42,721 (52).
 
 | Window | PR-AUC | ROC-AUC | Recall @ 1% alerts | Brier |
 |---|---|---|---|---|
-| Validation (C = 1.0) | pending | pending | pending | pending |
-| Test (tuned C) | pending | pending | pending | pending |
+| Validation (C = 1.0) | 0.819 | 0.981 | 0.911 | n/a |
+| Test (tuned C = 1.0) | 0.690 | 0.976 | 0.808 | 0.023 |
+
+Validation PR-AUC by C: 0.01 → 0.792, 0.1 → 0.819, 1.0 → 0.819, 10.0 → 0.819. The tuned value is C = 1.0. Test confusion matrix at threshold 0.5: TN 41,546, FP 1,123, FN 8, TP 44.
 
 ## Decision
 
